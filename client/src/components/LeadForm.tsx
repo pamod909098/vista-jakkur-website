@@ -6,8 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { X } from "lucide-react";
 import { toast } from "sonner";
-
-type LeadFormType = "inquiry" | "site-visit" | "investment" | "callback" | "brochure";
+import type { LeadFormType } from "@/hooks/useLeadForm";
 
 interface LeadFormProps {
   type: LeadFormType | null;
@@ -43,6 +42,12 @@ const FORM_CONFIG: Record<LeadFormType, { title: string; description: string; ha
   brochure: {
     title: "Download Brochure",
     description: "Enter your details and we'll email you our latest project brochure.",
+    hasProject: false,
+    hasBudget: false,
+  },
+  marketing: {
+    title: "Digital Marketing Consultation",
+    description: "Tell us about your company video or YouTube promotion goals and our team will contact you shortly.",
     hasProject: false,
     hasBudget: false,
   },
