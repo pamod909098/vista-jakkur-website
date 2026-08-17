@@ -42,6 +42,7 @@ export const NAV_LINKS = [
       { label: "Asset Management", href: "/services#asset-management" },
       { label: "Sustainability", href: "/services#sustainability" },
       { label: "Infrastructure", href: "/services#infrastructure" },
+      { label: "Digital Marketing", href: "/services#digital-marketing" },
     ],
   },
   {
@@ -160,6 +161,21 @@ export const SERVICES = [
       "Utility Infrastructure",
       "Landscape Development",
       "Public Spaces",
+    ],
+  },
+  {
+    id: "digital-marketing",
+    title: "Digital Marketing & Video Promotion",
+    description:
+      "Extending business visibility through strategic digital marketing, YouTube video promotion, and carefully targeted company-video advertising campaigns.",
+    icon: "Youtube",
+    items: [
+      "YouTube Video Promotion",
+      "Company Video Advertising",
+      "Video Campaign Strategy",
+      "Audience Targeting & Distribution",
+      "YouTube Channel Optimisation",
+      "Campaign Performance Reporting",
     ],
   },
 ];
@@ -366,6 +382,7 @@ export const INDUSTRIES = [
   "Government",
   "Industrial",
   "Investment Sector",
+  "Digital & Media",
 ];
 
 export const STATS = [
