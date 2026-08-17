@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-type LeadFormType = "inquiry" | "site-visit" | "investment" | "callback" | "brochure";
+export type LeadFormType = "inquiry" | "site-visit" | "investment" | "callback" | "brochure" | "marketing";
 
 export function useLeadForm() {
   const [formType, setFormType] = useState<LeadFormType | null>(null);
