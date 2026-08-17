@@ -5,12 +5,12 @@
 import type { ElementType } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowDownRight, ArrowUpRight, Building2, Check, ChevronRight, CircleGauge, Home as HomeIcon, Landmark, Leaf, MapPin, MoveRight, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Building2, Check, ChevronRight, CircleGauge, Home as HomeIcon, Landmark, Leaf, MapPin, MoveRight, ShieldCheck, Sparkles, TrendingUp, Youtube } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 import { useLeadForm } from "@/hooks/useLeadForm";
 import { BLOG_POSTS, DEVELOPMENT_PROCESS, INDUSTRIES, PROJECTS, SERVICES, STATS, SUSTAINABILITY_PILLARS } from "@/lib/siteData";
 
-const ICONS: Record<string, ElementType> = { Home: HomeIcon, Building2, TrendingUp, Landmark, Leaf, Briefcase: CircleGauge };
+const ICONS: Record<string, ElementType> = { Home: HomeIcon, Building2, TrendingUp, Landmark, Leaf, Briefcase: CircleGauge, Youtube };
 
 const reveal = { hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.52 } } };
 

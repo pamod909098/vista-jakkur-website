@@ -1,6 +1,6 @@
 /*
- * Vista Spaces Services Page — Verdant Modernism
- * Detailed service cards for all 6 core business areas
+ * Vista Spaces Services Page — Architectural Precision
+ * Detailed service cards for real estate and digital promotion capabilities
  */
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -11,6 +11,7 @@ import {
   Briefcase,
   Leaf,
   Landmark,
+  Youtube,
   CheckCircle2,
   ArrowRight,
   Star,
@@ -28,6 +29,7 @@ const SERVICE_ICONS: Record<string, React.ElementType> = {
   Briefcase,
   Leaf,
   Landmark,
+  Youtube,
 };
 
 const fadeUp = {
@@ -42,7 +44,7 @@ export default function Services() {
     <div>
       <PageHero
         title="Exceptional Spaces, Enduring Value"
-        subtitle="Comprehensive real estate solutions spanning residential, commercial, investment, and sustainable development."
+        subtitle="Comprehensive real estate solutions spanning residential, commercial, investment, sustainable development, and digital video promotion."
         bgImage="/images/vj-commercial.webp"
       />
 
@@ -85,21 +87,46 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
+                  {service.id === "digital-marketing" && (
+                    <button
+                      type="button"
+                      onClick={() => openForm("marketing")}
+                      className="mt-7 inline-flex items-center gap-2 border-b border-gold-500 pb-2 text-xs font-bold tracking-[0.12em] text-emerald-800 transition-colors hover:border-emerald-700 hover:text-emerald-700"
+                    >
+                      PLAN A VIDEO PROMOTION <ArrowRight className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
                 <div className={`h-[300px] rounded-lg overflow-hidden shadow-xl ${!isEven ? "lg:order-1" : ""}`}>
-                  <img
-                    src={[
-                      "/images/vj-residential.webp",
-                      "/images/vj-commercial.webp",
-                      "/images/vj-hero-architecture.webp",
-                      "/images/vj-commercial.webp",
-                      "/images/vj-community.webp",
-                      "/images/vj-commercial.webp",
-                    ][i]}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                  {service.id === "digital-marketing" ? (
+                    <div className="relative flex h-full overflow-hidden bg-graphite-950 p-7 text-white md:p-10">
+                      <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(to_right,rgba(255,255,255,.25)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.18)_1px,transparent_1px)] [background-size:40px_40px]" />
+                      <div className="absolute bottom-0 right-0 h-40 w-40 translate-x-10 translate-y-10 rounded-full border border-brass-400/60" />
+                      <div className="relative flex max-w-xs flex-col justify-between">
+                        <div className="flex h-14 w-14 items-center justify-center rounded-full border border-brass-400 bg-white/10 text-brass-400">
+                          <Youtube className="h-6 w-6" aria-hidden="true" />
+                        </div>
+                        <div>
+                          <p className="text-[0.65rem] font-extrabold tracking-[0.18em] text-brass-400">VISIBILITY / VIDEO / VALUE</p>
+                          <p className="mt-3 font-display text-3xl leading-tight">A sharper audience for every story.</p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <img
+                      src={[
+                        "/images/vj-residential.webp",
+                        "/images/vj-commercial.webp",
+                        "/images/vj-hero-architecture.webp",
+                        "/images/vj-commercial.webp",
+                        "/images/vj-community.webp",
+                        "/images/vj-commercial.webp",
+                      ][i]}
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
               </motion.div>
             );

@@ -1,5 +1,5 @@
 /*
- * Vista Spaces Contact Page — Verdant Modernism
+ * Vista Spaces Contact Page — Architectural Precision
  * Full contact form with inquiry types, map, and business info
  */
 import { useState } from "react";
@@ -33,6 +33,7 @@ export default function Contact() {
     { label: "Investment Inquiry", type: "investment" as const },
     { label: "Site Visit Booking", type: "site-visit" as const },
     { label: "Partnership", type: "partnership" as const },
+    { label: "Digital Marketing & Video Promotion", type: "digital-marketing" as const },
   ];
 
   return (
